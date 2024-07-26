@@ -57,7 +57,25 @@
       color: black; /* Icon color */
     }
 
-    .icons i {
+    .arrow, .dots, .open {
+      width: 30px; /* Set width */
+      height: 30px; /* Set height */
+      background-size: contain; /* Adjust size */
+      background-repeat: no-repeat; /* Prevent repeating */
+      background-position: center; /* Center the image */
+    }
+
+    .arrow {
+      background-image: url('./arrow.png');
+    }
+
+    .dots {
+      background-image: url('./options.png');
+      margin-left: 20px; /* Space between icons */
+    }
+
+    .open {
+      background-image: url('./open.png');
       margin-left: 20px; /* Space between icons */
     }
 
@@ -65,15 +83,16 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: start;
-      height: 100%;
+      justify-content: start; /* Distribute space evenly */
+      height: calc(100% - 100px); /* Adjust height to leave space for the text box */
       gap: 10px;
+      padding-bottom: 10px; /* Add padding at the bottom */
     }
 
     .container1, .container {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: start;
       height: 8%;
       width: 80%;
       background-color: #F8F8F8;
@@ -81,16 +100,81 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       color: black;
       font-size: 17px;
-      font-weight:500;
+      font-weight: 500;
+      padding: 0 10px; /* Add padding around the content */
     }
 
     .container1 {
-      margin-top: 85px;
+      margin-top: 94px;
       margin-bottom: 10px;
+      position: relative; /* Allow positioning of the image inside */
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+    }
+
+    .container1 .img1 {
+      background-image: url('./summary.png'); /* Ensure path is correct */
+      background-size: cover; /* Make sure the image covers the div */
+      background-position: center; /* Center the image */
+      height: 25px; /* Adjust height as needed */
+      width: 25px; /* Adjust width as needed */
+      margin-right: 10px; /* Space between image and text */
+    }
+    .img2{
+      background-image: url('./MoM.png'); /* Ensure path is correct */
+      background-size: cover; /* Make sure the image covers the div */
+      background-position: center; /* Center the image */
+      height: 25px; /* Adjust height as needed */
+      width: 24px; /* Adjust width as needed */
+      margin-right: 10px; /* Space between image and text */
+    }
+    .img3{
+      background-image: url('./pdfr.png'); /* Ensure path is correct */
+      background-size: cover; /* Make sure the image covers the div */
+      background-position: center; /* Center the image */
+      height: 25px; /* Adjust height as needed */
+      width: 19px; /* Adjust width as needed */
+      margin-right: 10px; /* Space between image and text */
+    }
+    .img4{
+      background-image: url('./net.png'); /* Ensure path is correct */
+      background-size: cover; /* Make sure the image covers the div */
+      background-position: center; /* Center the image */
+      height: 25px; /* Adjust height as needed */
+      width: 25px; /* Adjust width as needed */
+      margin-right: 10px; /* Space between image and text */
     }
 
     .container {
       margin: 10px;
+    }
+
+    .textbox {
+      margin-top: 136px;
+      width: 80%;
+      height: 8%;
+      background-color: #F8F8F8; /* Same background color as containers */
+      border: none; /* Remove border */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+      padding: 10px;
+      font-size: 17px;
+      font-weight: 500;
+      color: black;
+      resize: none; /* Disable resizing */
+      overflow: auto; /* Add scroll bars if needed */
+      text-align: left; /* Align text to the left */
+      vertical-align: middle; /* Center the text vertically */
+      display: flex; /* Use flexbox to center text vertically */
+      align-items: center; /* Center text vertically */
+    }
+
+    .textbox::placeholder {
+      color: #888; /* Placeholder color */
+      text-align: left; /* Align placeholder text to the left */
+      vertical-align: middle; /* Center placeholder text vertically */
     }
   </style>
 </head>
@@ -101,23 +185,32 @@
       <div class="name">Octavian</div>
     </div>
     <div class="icons">
-      <i class="fa fa-ellipsis-v"></i>
-      <i class="fas fa-chevron-right"></i>
+      <div class="open"></div>
+      <div class="dots"></div>
+      <div class="arrow"></div>
     </div>
   </div>
   <div class="options">
     <div class="container1">
-      Meeting summary and notes
+      <div class="img1"></div>
+      <div class="txt">Meeting summary and notes</div>
     </div>
     <div class="container">
+      <div class="img2">
+      </div>
       Minutes of meeting
     </div>
     <div class="container">
-      Chat with your doccument
+      <div class="img3">
+      </div>
+      Chat with your document
     </div>
     <div class="container">
+      <div class="img4">
+      </div>
       Upload your URL here
     </div>
+    <textarea name="textbox" class="textbox" id="textbox" placeholder="Ask Octavian" ></textarea>
   </div>
 </body>
 </html>

@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Multiple side panels",
+    "name": "Octavian",
     "version": "1.0",
-    "description": "This recipe shows how to use sidePanel.getOptions() to retrieve the current side panel and switch between side panels.",
+    "description": "Octavian is an advanced tool designed to transcribe and summarize video and audio files effortlessly. It provides concise summaries and answers questions related to the content, making it easier for users to quickly grasp key information. Whether you're sifting through lengthy recordings or seeking specific insights, Octavian streamlines the process, delivering clarity and efficiency at your fingertips.",
     "background": {
       "service_worker": "service-worker.js"
     },
