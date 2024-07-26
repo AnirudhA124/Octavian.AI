@@ -1,10 +1,123 @@
-<!doctype html>
-<html>
-  <head>
-    <title>My Sidepanel extension</title>
-  </head>
-  <body>
-    <h1>This is the main side panel</h1>
-    <p>Use this extension to make your dreams come true!</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Octavian</title>
+  <!-- Include Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: #FFFFFF;
+    }
+
+    .title {
+      width: 100%;
+      height: 9%;
+      background-color: #FFFFFF;
+      border-bottom: 2px solid #808080;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px; /* Add padding for spacing */
+    }
+
+    .heading {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 75px;
+      width: 75px;
+      background-image: url('./icon.png');
+      background-size: cover;
+      background-position: right;
+      margin-right: -21px;
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      font-size: 30px; /* Adjust icon size */
+      color: black; /* Icon color */
+    }
+
+    .icons i {
+      margin-left: 20px; /* Space between icons */
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      height: 100%;
+      gap: 10px;
+    }
+
+    .container1, .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 8%;
+      width: 80%;
+      background-color: #F8F8F8;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: black;
+      font-size: 17px;
+      font-weight:500;
+    }
+
+    .container1 {
+      margin-top: 85px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">
+    <div class="heading">
+      <div class="logo"></div>
+      <div class="name">Octavian</div>
+    </div>
+    <div class="icons">
+      <i class="fa fa-ellipsis-v"></i>
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+  <div class="options">
+    <div class="container1">
+      Meeting summary and notes
+    </div>
+    <div class="container">
+      Minutes of meeting
+    </div>
+    <div class="container">
+      Chat with your doccument
+    </div>
+    <div class="container">
+      Upload your URL here
+    </div>
+  </div>
+</body>
 </html>
