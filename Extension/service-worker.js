@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const welcomePage = 'welcome-sp.html';
-const mainPage = 'main-sp.html';
+const welcomePage = 'add_doc.html';
+const mainPage = 'main.html';
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.sidePanel.setOptions({ path: welcomePage });

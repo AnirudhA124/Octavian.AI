@@ -1,20 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Octavian Document Chat",
+  "name": "Octavian",
   "version": "1.0",
-  "description": "Chat with your documents",
-  "permissions": [
-    "sidePanel"
-  ],
-  "side_panel": {
-    "default_path": "index.html"
-  },
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+  "description": "Octavian is an advanced tool designed to transcribe and summarize video and audio files effortlessly. It provides concise summaries and answers questions related to the content, making it easier for users to quickly grasp key information. Whether you're sifting through lengthy recordings or seeking specific insights, Octavian streamlines the process, delivering clarity and efficiency at your fingertips.",
+  "background": {
+    "service_worker": "service-worker.js"
   },
   "action": {
-    "default_title": "Open Octavian"
-  }
+    "default_title": "Click to open panel"
+  },
+  
+  "permissions": ["sidePanel"]
 }
