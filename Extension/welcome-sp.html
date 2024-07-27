@@ -151,7 +151,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       position: relative;
-      padding: 0 10px; /* Add padding for consistent spacing */
+      padding: 0 10px;
     }
 
     .textbox {
@@ -171,8 +171,8 @@
     }
 
     .icon {
-      height: 24px; /* Increased size */
-      width: 28px;  /* Increased size */
+      height: 24px;
+      width: 28px;
       margin: 0 5px;
       background-size: contain;
       background-repeat: no-repeat;
@@ -230,21 +230,21 @@
       border-radius: 10px;
       border: 2px solid #000AFF;
       border-style: dashed;
-      display: flex; /* Added to position the child elements */
-      justify-content: center; /* Center the content horizontally */
-      align-items: center; /* Center the content vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
       font-size: 22px;
-      text-align: center; /* Ensure text is centered */
+      text-align: center;
     }
 
     .pdfric {
-      background-image: url('./pdfr.png'); /* Make sure the path is correct */
-      background-size: contain; /* Ensure the entire image is visible */
+      background-image: url('./pdfr.png');
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      height: 50px; /* Set an appropriate size for visibility */
-      width: 50px;  /* Set an appropriate size for visibility */
+      height: 50px;
+      width: 50px;
     }
 
     .subtxt {
@@ -257,7 +257,12 @@
       margin-top: 44px;
       color: #000AFF;
       font-size: 22px;
-      cursor: pointer; /* Change cursor to indicate clickable */
+      cursor: pointer;
+    }
+
+    #fileInfo {
+      margin-top: 10px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -276,7 +281,6 @@
   <div class="options">
     <div class="container1">
       <div class="header">
-        <a href="./main-sp.html"><div class="back" aria-label="Back"></div></a>
         Chat with your documents
       </div>
       <div class="add_cont">
@@ -284,30 +288,17 @@
           <div class="pdfric"></div>
           <div class="txt">Drag and drop your document here</div>
           <div class="subtxt">pdf, doc, pptx, txt</div>
+          <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.pptx,.txt" style="display: none;">
           <div class="txturl" id="clickToUpload">Click here to Upload</div>
-          <input type="file" id="fileInput" accept=".pdf,.doc,.pptx,.txt" style="display: none;" />
+          <div id="fileInfo"></div>
         </div>
       </div>
     </div>
     <div class="text-container">
       <textarea name="textbox" class="textbox" id="textbox" placeholder="Ask Octavian"></textarea>
-      <div class="icon pin" aria-label="Pin"></div>
-      <div class="icon pic" aria-label="Picture"></div>
-      <div class="icon send" aria-label="Send"></div>
+      <div class="icon send" id="sendButton" aria-label="Send"></div>
     </div>
   </div>
-  <script>
-    // JavaScript to handle file input trigger
-    document.getElementById('clickToUpload').addEventListener('click', function() {
-      document.getElementById('fileInput').click();
-    });
-
-    // Optional: Handle file selection
-    document.getElementById('fileInput').addEventListener('change', function() {
-      const files = this.files;
-      // Handle the selected files here
-      console.log(files);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
