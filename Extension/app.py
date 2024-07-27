@@ -53,12 +53,13 @@ def upload_file():
 
     retriever = save_and_process_document(file)
 
-    question = "What is this?"
+    question = request.form.get('question', '')
     if not question:
         return jsonify({"error": "No question provided"}), 400
 
     response = chat(question, retriever)
     print(response)
+    
     return jsonify({"message": "File processed successfully", "response": response})
 
 if __name__ == '__main__':
