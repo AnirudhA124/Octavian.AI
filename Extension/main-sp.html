@@ -90,10 +90,10 @@
     }
 
     .container1, .container {
-      display: flex;
+      /* display: flex;
       align-items: center;
-      justify-content: start;
-      height: 8%;
+      justify-content: start; */
+      height: 10%;
       width: 80%;
       background-color: #F8F8F8;
       border-radius: 10px;
@@ -102,6 +102,12 @@
       font-size: 17px;
       font-weight: 500;
       padding: 0 10px; /* Add padding around the content */
+    }
+
+    .opContent{
+      display: flex;
+      align-items: center;
+      justify-content: start;
     }
 
     .container1 {
@@ -149,6 +155,10 @@
 
     .container {
       margin: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
     }
 
     .textbox {
@@ -192,23 +202,31 @@
   </div>
   <div class="options">
     <div class="container1">
-      <div class="img1"></div>
-      <div class="txt">Meeting summary and notes</div>
+      <div class="opContent">
+        <div class="img1"></div>
+        <div class="txt">Meeting summary and notes</div>
+      </div>
     </div>
     <div class="container">
-      <div class="img2">
+      <div class="opContent">
+        <div class="img2">
+        </div>
+        Minutes of meeting
       </div>
-      Minutes of meeting
     </div>
     <div class="container">
-      <div class="img3">
+      <div class="opContent">
+        <div class="img3">
+        </div>
+        Chat with your document
       </div>
-      Chat with your document
     </div>
     <div class="container">
-      <div class="img4">
+      <div class="opContent">
+        <div class="img4">
+        </div>
+        Upload your URL here
       </div>
-      Upload your URL here
     </div>
     <textarea name="textbox" class="textbox" id="textbox" placeholder="Ask Octavian" ></textarea>
   </div>
