@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Octavian</title>
-  <!-- Include Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     * {
@@ -28,7 +27,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 20px; /* Add padding for spacing */
+      padding: 0 20px;
     }
 
     .heading {
@@ -53,16 +52,16 @@
     .icons {
       display: flex;
       align-items: center;
-      font-size: 30px; /* Adjust icon size */
-      color: black; /* Icon color */
+      font-size: 30px;
+      color: black;
     }
 
     .arrow, .dots, .open {
-      width: 30px; /* Set width */
-      height: 30px; /* Set height */
-      background-size: contain; /* Adjust size */
-      background-repeat: no-repeat; /* Prevent repeating */
-      background-position: center; /* Center the image */
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     .arrow {
@@ -71,28 +70,25 @@
 
     .dots {
       background-image: url('./options.png');
-      margin-left: 20px; /* Space between icons */
+      margin-left: 20px;
     }
 
     .open {
       background-image: url('./open.png');
-      margin-left: 20px; /* Space between icons */
+      margin-left: 20px;
     }
 
     .options {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: start; /* Distribute space evenly */
-      height: calc(100% - 100px); /* Adjust height to leave space for the text box */
+      justify-content: start;
+      height: calc(100% - 100px);
       gap: 10px;
-      padding-bottom: 10px; /* Add padding at the bottom */
+      padding-bottom: 10px;
     }
 
     .container1, .container {
-      /* display: flex;
-      align-items: center;
-      justify-content: start; */
       height: 10%;
       width: 80%;
       background-color: #F8F8F8;
@@ -101,7 +97,7 @@
       color: black;
       font-size: 17px;
       font-weight: 500;
-      padding: 0 10px; /* Add padding around the content */
+      padding: 0 10px;
     }
 
     .opContent{
@@ -113,7 +109,7 @@
     .container1 {
       margin-top: 94px;
       margin-bottom: 10px;
-      position: relative; /* Allow positioning of the image inside */
+      position: relative;
       display: flex;
       flex-direction: row;
       justify-content: start;
@@ -121,36 +117,39 @@
     }
 
     .container1 .img1 {
-      background-image: url('./summary.png'); /* Ensure path is correct */
-      background-size: cover; /* Make sure the image covers the div */
-      background-position: center; /* Center the image */
-      height: 25px; /* Adjust height as needed */
-      width: 25px; /* Adjust width as needed */
-      margin-right: 10px; /* Space between image and text */
+      background-image: url('./summary.png');
+      background-size: cover;
+      background-position: center;
+      height: 25px;
+      width: 25px;
+      margin-right: 10px;
     }
-    .img2{
-      background-image: url('./MoM.png'); /* Ensure path is correct */
-      background-size: cover; /* Make sure the image covers the div */
-      background-position: center; /* Center the image */
-      height: 25px; /* Adjust height as needed */
-      width: 24px; /* Adjust width as needed */
-      margin-right: 10px; /* Space between image and text */
+
+    .img2 {
+      background-image: url('./MoM.png');
+      background-size: cover;
+      background-position: center;
+      height: 25px;
+      width: 24px;
+      margin-right: 10px;
     }
-    .img3{
-      background-image: url('./pdfr.png'); /* Ensure path is correct */
-      background-size: cover; /* Make sure the image covers the div */
-      background-position: center; /* Center the image */
-      height: 25px; /* Adjust height as needed */
-      width: 19px; /* Adjust width as needed */
-      margin-right: 10px; /* Space between image and text */
+
+    .img3 {
+      background-image: url('./pdfr.png');
+      background-size: cover;
+      background-position: center;
+      height: 25px;
+      width: 19px;
+      margin-right: 10px;
     }
-    .img4{
-      background-image: url('./net.png'); /* Ensure path is correct */
-      background-size: cover; /* Make sure the image covers the div */
-      background-position: center; /* Center the image */
-      height: 25px; /* Adjust height as needed */
-      width: 25px; /* Adjust width as needed */
-      margin-right: 10px; /* Space between image and text */
+
+    .img4 {
+      background-image: url('./net.png');
+      background-size: cover;
+      background-position: center;
+      height: 25px;
+      width: 25px;
+      margin-right: 10px;
     }
 
     .container {
@@ -161,30 +160,58 @@
       align-items: center;
     }
 
-    .textbox {
-      margin-top: 136px;
+    .text-container {
+      margin-top: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 10%;
       width: 80%;
-      height: 8%;
-      background-color: #F8F8F8; /* Same background color as containers */
-      border: none; /* Remove border */
+      background-color: #F8F8F8;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
-      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      padding: 0 10px; /* Add padding for consistent spacing */
+    }
+
+    .textbox {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: transparent;
       font-size: 17px;
-      font-weight: 500;
       color: black;
-      resize: none; /* Disable resizing */
-      overflow: auto; /* Add scroll bars if needed */
-      text-align: left; /* Align text to the left */
-      vertical-align: middle; /* Center the text vertically */
-      display: flex; /* Use flexbox to center text vertically */
-      align-items: center; /* Center text vertically */
+      padding: 17px;
+      box-sizing: border-box;
+      resize: none;
     }
 
     .textbox::placeholder {
-      color: #888; /* Placeholder color */
-      text-align: left; /* Align placeholder text to the left */
-      vertical-align: middle; /* Center placeholder text vertically */
+      color: #888;
+    }
+
+    .icon {
+      height: 24px; /* Increased size */
+      width: 28px;  /* Increased size */
+      margin: 0 5px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .pin{
+      background-image: url('./pin.png');
+      cursor: pointer;
+    }
+
+    .pic {
+      background-image: url('./pic.png');
+      cursor: pointer;
+    }
+
+    .send {
+      background-image: url('./send.png');
+      cursor: pointer;
     }
   </style>
 </head>
@@ -209,26 +236,28 @@
     </div>
     <div class="container">
       <div class="opContent">
-        <div class="img2">
-        </div>
+        <div class="img2"></div>
         Minutes of meeting
       </div>
     </div>
     <div class="container">
       <div class="opContent">
-        <div class="img3">
-        </div>
+        <div class="img3"></div>
         Chat with your document
       </div>
     </div>
     <div class="container">
       <div class="opContent">
-        <div class="img4">
-        </div>
+        <div class="img4"></div>
         Upload your URL here
       </div>
     </div>
-    <textarea name="textbox" class="textbox" id="textbox" placeholder="Ask Octavian" ></textarea>
+    <div class="text-container">
+      <textarea name="textbox" class="textbox" id="textbox" placeholder="Ask Octavian"></textarea>
+      <div class="icon pin"></div>
+      <div class="icon pic"></div>
+      <div class="icon send"></div>
+    </div>
   </div>
 </body>
 </html>
