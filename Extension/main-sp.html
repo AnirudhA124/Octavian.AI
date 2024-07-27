@@ -98,9 +98,11 @@
       font-size: 17px;
       font-weight: 500;
       padding: 0 10px;
+      display: flex;
+      align-items: center;
     }
 
-    .opContent{
+    .opContent {
       display: flex;
       align-items: center;
       justify-content: start;
@@ -152,16 +154,8 @@
       margin-right: 10px;
     }
 
-    .container {
-      margin: 10px;
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: center;
-    }
-
     .text-container {
-      margin-top: 80px;
+      margin-top: 140px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -171,7 +165,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       position: relative;
-      padding: 0 10px; /* Add padding for consistent spacing */
+      padding: 0 10px;
     }
 
     .textbox {
@@ -191,15 +185,15 @@
     }
 
     .icon {
-      height: 24px; /* Increased size */
-      width: 28px;  /* Increased size */
+      height: 24px;
+      width: 28px;
       margin: 0 5px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
     }
 
-    .pin{
+    .pin {
       background-image: url('./pin.png');
       cursor: pointer;
     }
@@ -212,6 +206,15 @@
     .send {
       background-image: url('./send.png');
       cursor: pointer;
+    }
+
+    a {
+      text-decoration: none; /* Remove underline */
+      color: inherit; /* Use the container's text color */
+    }
+
+    a:visited {
+      color: inherit; /* Ensure visited links have the same color */
     }
   </style>
 </head>
@@ -228,30 +231,30 @@
     </div>
   </div>
   <div class="options">
-    <div class="container1">
+    <a href="meeting-summary.html" class="container1">
       <div class="opContent">
         <div class="img1"></div>
         <div class="txt">Meeting summary and notes</div>
       </div>
-    </div>
-    <div class="container">
+    </a>
+    <a href="minutes-of-meeting.html" class="container">
       <div class="opContent">
         <div class="img2"></div>
         Minutes of meeting
       </div>
-    </div>
-    <div class="container">
+    </a>
+    <a href="./welcome-sp.html" class="container">
       <div class="opContent">
         <div class="img3"></div>
         Chat with your document
       </div>
-    </div>
-    <div class="container">
+    </a>
+    <a href="upload-url.html" class="container">
       <div class="opContent">
         <div class="img4"></div>
         Upload your URL here
       </div>
-    </div>
+    </a>
     <div class="text-container">
       <textarea name="textbox" class="textbox" id="textbox" placeholder="Ask Octavian"></textarea>
       <div class="icon pin"></div>
