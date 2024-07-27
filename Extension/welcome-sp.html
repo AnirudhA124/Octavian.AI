@@ -141,7 +141,7 @@
     }
 
     .text-container {
-      margin-top: 55px;
+      margin-top: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -252,10 +252,12 @@
       color: #000000;
       font-weight: lighter;
     }
-    .txturl{
+
+    .txturl {
       margin-top: 44px;
       color: #000AFF;
       font-size: 22px;
+      cursor: pointer; /* Change cursor to indicate clickable */
     }
   </style>
 </head>
@@ -282,7 +284,8 @@
           <div class="pdfric"></div>
           <div class="txt">Drag and drop your document here</div>
           <div class="subtxt">pdf, doc, pptx, txt</div>
-          <div class="txturl">Click here to Upload</div>
+          <div class="txturl" id="clickToUpload">Click here to Upload</div>
+          <input type="file" id="fileInput" accept=".pdf,.doc,.pptx,.txt" style="display: none;" />
         </div>
       </div>
     </div>
@@ -293,5 +296,18 @@
       <div class="icon send" aria-label="Send"></div>
     </div>
   </div>
+  <script>
+    // JavaScript to handle file input trigger
+    document.getElementById('clickToUpload').addEventListener('click', function() {
+      document.getElementById('fileInput').click();
+    });
+
+    // Optional: Handle file selection
+    document.getElementById('fileInput').addEventListener('change', function() {
+      const files = this.files;
+      // Handle the selected files here
+      console.log(files);
+    });
+  </script>
 </body>
 </html>
