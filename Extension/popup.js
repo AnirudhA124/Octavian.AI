@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       minutesOfMeeting.addEventListener('click', function() {
         console.log('Minutes of meeting clicked');
-        chrome.runtime.sendMessage({action: 'openExtension', id: 'ggifbhnhbaomifdpjpimajoodfjaeafm'}, response => {
+        chrome.runtime.sendMessage({action: 'openExtension', id: 'bkmhfgbiemlmokjfbbijkckanjhepina'}, response => {
           if (chrome.runtime.lastError) {
             console.error('Error:', chrome.runtime.lastError);
           } else {

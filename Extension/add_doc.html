@@ -145,15 +145,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 11%;
-      width: 80%;
       background-color: #F8F8F8;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       position: relative;
-      padding: 0 10px;
+      padding: 20px;
     }
-
+    
     .textbox {
       width: 100%;
       height: 100%;
@@ -264,6 +262,10 @@
       height: 11%;
       border-bottom: 2px solid black;
     }
+    a {
+  text-decoration: none;  /* Removes underline */
+  color: #000000;
+}
   </style>
 </head>
 <body>
@@ -297,9 +299,8 @@
         </div>
       </div>
     </div>
-    <div class="text-container">
-      <textarea name="textbox" class="textbox" id="textbox" placeholder="Ask Octavian"></textarea>
-      <div class="icon send" id="sendButton" aria-label="Send"></div>
+    <div class="text-container" id="redirectChat">
+      Click to chat
     </div>
   </div>
   <script src="script.js"></script>

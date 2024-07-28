@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         minutesOfMeeting.addEventListener('click', function() {
             console.log('Minutes of meeting clicked');
-            chrome.runtime.sendMessage('ggifbhnhbaomifdpjpimajoodfjaeafm', {action: 'open_popup'}, (response) => {
+            chrome.runtime.sendMessage('bkmhfgbiemlmokjfbbijkckanjhepina', {action: 'open_popup'}, (response) => {
                 if (chrome.runtime.lastError) {
                     console.error('Error:', chrome.runtime.lastError.message);
                 } else if (!response || response.status !== 'Popup opened') {
