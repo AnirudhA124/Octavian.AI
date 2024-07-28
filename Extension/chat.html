@@ -83,19 +83,18 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: calc(100% - 100px);
+      height: calc(90% - 100px);
       gap: 10px;
       padding-bottom: 10px;
     }
 
     .container1 {
-     padding: 25px;
-     width: 70%;
+      margin: 10px;
+     width: 81%;
       align-self: flex-start;
       margin-left: 20px;
       /* margin-top: 20px; */
-      height: 35%;
-      background-color: #F8F8F8;
+      background-color: #DBE2EF;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       color: black;
@@ -108,13 +107,12 @@
       align-self: center;
     }
     .container2 {
-     padding: 25px;
-     width: 70%;
+      margin: 10px;
+     width: 81%;
       align-self: flex-start;
       margin-left: 20px;
       /* margin-top: 20px; */
-      height: 35%;
-      background-color: #DBE2EF;
+      background-color: #F8F8F8;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       color: black;
@@ -164,8 +162,9 @@
     }
 
     .text-container {
-      position: fixed;
-      bottom: 50px;
+      position:sticky;
+      bottom: 10px;
+      margin-left: 50px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -299,18 +298,61 @@
         flex-direction: row;
         align-items: center;
     }
+    .options {
+  height: 80vh;  /* Set this to the desired height */
+  overflow-y: auto;  /* Makes the container scrollable */
+  border: 1px solid #ccc;  /* Optional: for a visible boundary */
+  padding: 10px;  /* Optional: for spacing around messages */
+  margin-bottom: 10px;  /* Optional: space from other elements */
+}
+
+/* Ensure the messages are styled appropriately */
+.container1, .container2 {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.container1 {
+  background-color: #f1f1f1;  /* Example background color */
+}
+
+.container2 {
+  background-color: #e2e2e2;  /* Example background color */
+}
+
+.logou, .logoc {
+  width: 30px;  /* Set appropriate size for logos */
+  height: 30px;
+  background-size: cover;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.logou {
+  background-image: url('path/to/user/logo.png');  /* Set the path to the user logo */
+}
+
+.logoc {
+  background-image: url('path/to/bot/logo.png');  /* Set the path to the bot logo */
+}
+
     .logoc{
         background-image: url(./images/icon.png);
         background-size: cover;        
         height: 70px;
         width: 70px;
-        margin-left: 10px;
+        margin-right: 30px;
+        flex-shrink: 0; /* Prevent the logo from shrinking */
+
     }
     .logou{
         background-size: cover;        
         height: 70px;
         width: 70px;
-        margin-left: 10px;
+        margin-right: 30px;
+        flex-shrink: 0; /* Prevent the logo from shrinking */
+
     }
   </style>
 </head>
@@ -327,28 +369,12 @@
     </div>
   </div>
   <div class="options">
-    <div class="container1">
-      <div class="headt">
-        <a href="./main.html"><div class="back"></div></a>
-        <div class="header">
-          Chat with your documents
-        </div>
-      </div>
-      <div class="add_cont">
-        <div class="add_doc">
-          <div class="pdfric"></div>
-          <div class="txt">Drag and drop your document here</div>
-          <div class="subtxt">pdf, doc, pptx, txt</div>
-          <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.pptx,.txt" style="display: none;">
-          <div class="txturl" id="clickToUpload">Click here to Upload</div>
-          <div id="fileInfo"></div>
-        </div>
-      </div>
-    </div>
-    <div class="text-container">
-      <textarea name="textbox" class="textbox" id="textbox" placeholder="Ask Octavian"></textarea>
-      <div class="icon send" id="sendButton" aria-label="Send"></div>
-    </div>
+    <!-- Messages will be appended here -->
+  </div>
+  <div class="text-container">
+    <textarea name="textbox" class="textbox" id="textbox" placeholder="Ask Octavian"></textarea>
+    <div class="icon send" id="sendButton" aria-label="Send"></div>
+  </div>
   </div>
   <script src="chat.js"></script>
 </body>
