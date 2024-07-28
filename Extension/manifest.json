@@ -10,5 +10,10 @@
     "default_title": "Click to open panel"
   },
   
-  "permissions": ["sidePanel"]
+  "permissions": ["sidePanel","storage","downloads",
+        "tabs",
+        "management"],
+  "externally_connectable": {
+      "ids": ["ggifbhnhbaomifdpjpimajoodfjaeafm"] 
+  }
 }
