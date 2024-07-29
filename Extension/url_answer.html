@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Octavian - Chat with your documents">
   <title>Octavian</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
@@ -83,13 +84,16 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      height: calc(100% - 200px);
+      height: calc(100% - 100px);
       gap: 10px;
       padding-bottom: 10px;
     }
 
-    .container1, .container {
-      height: 16%;
+    .container1 {
+      padding: 0;
+      margin-top: 30px;
+      margin-bottom: 80px;
+      height: 10%;
       width: 80%;
       background-color: #F8F8F8;
       border-radius: 10px;
@@ -97,29 +101,20 @@
       color: black;
       font-size: 17px;
       font-weight: 500;
-      padding: 0 10px;
-      display: flex;
-      align-items: center;
-    }
-
-    .opContent {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-    }
-
-    .container1 {
-      margin-top: 94px;
-      margin-bottom: 10px;
-      position: relative;
       display: flex;
       flex-direction: row;
-      justify-content: start;
       align-items: center;
+      justify-content: center;
+      padding: 10px;
     }
 
-    .container1 .img1 {
-      background-image: url('./images/summary.png');
+    .opContent{
+      display: flex;
+      align-items: center;
+      justify-content: start;
+    }
+
+    .img2, .img3, .img4 {
       background-size: cover;
       background-position: center;
       height: 25px;
@@ -129,45 +124,38 @@
 
     .img2 {
       background-image: url('./images/MoM.png');
-      background-size: cover;
-      background-position: center;
-      height: 25px;
-      width: 24px;
-      margin-right: 10px;
     }
 
     .img3 {
       background-image: url('./images/pdfr.png');
-      background-size: cover;
-      background-position: center;
       height: 25px;
       width: 19px;
-      margin-right: 10px;
     }
 
     .img4 {
       background-image: url('./images/net.png');
-      background-size: cover;
-      background-position: center;
-      height: 25px;
-      width: 25px;
-      margin-right: 10px;
+    }
+
+    .container {
+      margin: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
     }
 
     .text-container {
-      margin-top: 140px;
+      margin-top: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 11%;
-      width: 80%;
       background-color: #F8F8F8;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       position: relative;
-      padding: 0 10px;
+      padding: 20px;
     }
-
+    
     .textbox {
       width: 100%;
       height: 100%;
@@ -175,7 +163,7 @@
       background-color: transparent;
       font-size: 17px;
       color: black;
-      padding: 8px;
+      padding: 17px;
       box-sizing: border-box;
       resize: none;
     }
@@ -208,14 +196,87 @@
       cursor: pointer;
     }
 
-    a {
-      text-decoration: none; /* Remove underline */
-      color: inherit; /* Use the container's text color */
+
+
+    .back {
+      margin-left: 10px;
+      background-image: url('./images/back.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 24px;
+      width: 24px;
+      margin-right: 10px;
+      cursor: pointer;
     }
 
-    a:visited {
-      color: inherit; /* Ensure visited links have the same color */
+    .add_cont {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
     }
+
+    .add_doc {
+      height: 81%;
+      width: 89%;
+      align-self: center;
+      border-radius: 10px;
+      border: 2px solid #000AFF;
+      border-style: dashed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .pdfric {
+      background-image: url('./images/pdfr.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 50px;
+      width: 50px;
+    }
+
+    .subtxt {
+      font-size: 22px;
+      color: #000000;
+      font-weight: lighter;
+    }
+
+    .txturl {
+      margin-top: 44px;
+      color: #000AFF;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    #fileInfo {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .headt{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      height: 11%;
+      border-bottom: 2px solid black;
+    }
+    a {
+  text-decoration: none;  /* Removes underline */
+  color: #000000;
+}
+.urllogo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 157px;
+    width: 182px;
+    background-image: url(./images/url.png);
+}
   </style>
 </head>
 <body>
@@ -225,37 +286,20 @@
       <div class="name">Octavian</div>
     </div>
     <div class="icons">
-      <div class="open"></div>
-      <div class="dots"></div>
-      <div class="arrow"></div>
+      <div class="open" aria-label="Open"></div>
+      <div class="dots" aria-label="Options"></div>
+      <div class="arrow" aria-label="Arrow"></div>
     </div>
   </div>
   <div class="options">
-    <a href="meeting-summary.html" class="container1">
-      <div class="opContent">
-        <div class="img1"></div>
-        <div class="txt">Meeting summary and notes</div>
-      </div>
-    </a>
-    <a href="./add_doc.html" class="container">
-      <div class="opContent">
-        <div class="img3"></div>
-        Chat with your document
-      </div>
-    </a>
-    <a href="#" id="minutes-of-meeting" class="container">
-      <div class="opContent">
-        <div class="img2"></div>
-        Minutes of meeting
-      </div>
-    </a>
-    <a href="./url_answer.html" class="container">
-      <div class="opContent">
-        <div class="img4"></div>
-        Upload your URL here
-      </div>
-    </a>
+    <div class="urllogo"></div>
+    <div class="container1">
+        <textarea name="textbox" class="textbox" id="textbox" placeholder="Add URL"></textarea>
+    </div>
+    <div class="text-container" id="redirectChatURL">
+      Click to chat
+    </div>
   </div>
-  <script src="./open_transcriptonic_popup.js"></script>
+  <script src="./url_scripts.js"></script>
 </body>
 </html>
