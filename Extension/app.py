@@ -15,7 +15,7 @@ CORS(app)
 
 # Set your Cohere API key
 llm = ChatCohere(cohere_api_key="uml0lVi8lxTjTL10Bkb42inOlNFk3zDf7sELxPDN", model="command-r")
-prompt = hub.pull("rlm/rag-prompt")
+prompt = hub.pull("chaiboi/pdf_text_prompt")
 db = None  # Global variable to hold the database
 
 @app.route('/upload', methods=['POST'])
